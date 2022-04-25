@@ -36,10 +36,10 @@ function computerPlay () {              //function randomly picks and returns co
 function playRound(playerSelection, computerSelection) {        //function plays one round of tic-tac-toe
 
     if((playerSelection == "ROCK" && computerSelection == "SCISSORS") || (playerSelection == "PAPER" && computerSelection == "ROCK") || (playerSelection == "SCISSORS" && computerSelection == "PAPER")) {
-        return "Player Wins!";
+        return "Player Wins! " + playerSelection + " beats " + computerSelection + ".";
     }
     if((playerSelection == "ROCK" && computerSelection == "PAPER") || (playerSelection == "PAPER" && computerSelection == "SCISSORS") || (playerSelection == "SCISSORS" && computerSelection == "ROCK")) {
-        return "Computer Wins!";
+        return "Computer Wins! " + computerSelection + " beats " + playerSelection + ".";
     }
     if(playerSelection == computerSelection) {
         return "Tie!";
