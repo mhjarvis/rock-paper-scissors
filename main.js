@@ -1,4 +1,4 @@
-(function() {                           //welcome function/prompt to start game
+function playerChoice() {                           //welcome function/prompt to start game
 
     console.log("Welcome to Tic-Tac-Toe");
     console.log(".......................");
@@ -15,9 +15,7 @@
             return playerChoice;
         }
     }
-    
-
-})();
+}
 
 
 function computerPlay () {              //function randomly picks and returns computers value
@@ -25,25 +23,27 @@ function computerPlay () {              //function randomly picks and returns co
     let randomNum = Math.floor(Math.random() * 3 + 1);
     
     if(randomNum == 1) {
-        return "Rock";
+        return "ROCK";
     }
     if(randomNum == 2) {
-        return "Paper";
+        return "PAPER";
     }
     if(randomNum == 3) {
-        return "Scissors";
+        return "SCISSORS";
     }
 }
 
+function playRound(playerSelection, computerSelection) {        //function plays one round of tic-tac-toe
 
-console.log(computerPlay());
-console.log(computerPlay());
-console.log(computerPlay());
-console.log(computerPlay());
-console.log(computerPlay());
-console.log(computerPlay());
-console.log(computerPlay());
-console.log(computerPlay());
-console.log(computerPlay());
-console.log(computerPlay());
-console.log(computerPlay());
+    if((playerSelection == "ROCK" && computerSelection == "SCISSORS") || (playerSelection == "PAPER" && computerSelection == "ROCK") || (playerSelection == "SCISSORS" && computerSelection == "PAPER")) {
+        return "Player Wins!";
+    }
+    if((playerSelection == "ROCK" && computerSelection == "PAPER") || (playerSelection == "PAPER" && computerSelection == "SCISSORS") || (playerSelection == "SCISSORS" && computerSelection == "ROCK")) {
+        return "Computer Wins!";
+    }
+    if(playerSelection == computerSelection) {
+        return "Tie!";
+    }
+}
+
+console.log(playRound(playerChoice(), computerPlay()));
