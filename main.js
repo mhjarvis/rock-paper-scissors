@@ -1,14 +1,10 @@
 function playerChoice() {                           //welcome function/prompt to start game
-
-    console.log("Welcome to Tic-Tac-Toe");
-    console.log(".......................");
     
     let answer = false;
 
     while(answer == false) {
         let playerChoice = prompt("Pick one - Rock, Paper, or Scissors: ");
         playerChoice = playerChoice.toUpperCase();
-        console.log(playerChoice);
 
         if(playerChoice == "ROCK" || playerChoice == "PAPER" || playerChoice == "SCISSORS") {
             answer = true;
@@ -46,4 +42,12 @@ function playRound(playerSelection, computerSelection) {        //function plays
     }
 }
 
-console.log(playRound(playerChoice(), computerPlay()));
+(function () {
+
+    console.log("Welcome to Tic-Tac-Toe");
+    console.log(".......................");
+
+    for(let i = 0; i < 5; i++) {
+        console.log(playRound(playerChoice(), computerPlay()));
+    }
+})();
