@@ -51,3 +51,20 @@ function playRound(playerSelection, computerSelection) {        //function plays
         console.log(playRound(playerChoice(), computerPlay()));
     }
 })(); */
+
+
+const rock_btn = document.querySelector('#rock-btn');
+const paper_btn = document.querySelector('#paper-btn');
+const scissors_btn = document.querySelector('#scissors-btn');
+
+rock_btn.addEventListener('click', () => {
+    console.log("Rock");
+  });
+
+paper_btn.addEventListener('click', () => {
+    console.log("Paper");
+});
+
+scissors_btn.addEventListener('click', () => {
+    console.log("Scissors");
+});
