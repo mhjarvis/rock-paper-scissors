@@ -58,13 +58,13 @@ const paper_btn = document.querySelector('#paper-btn');
 const scissors_btn = document.querySelector('#scissors-btn');
 
 rock_btn.addEventListener('click', () => {
-    console.log("Rock");
+    console.log(playRound("ROCK", computerPlay()));
   });
 
 paper_btn.addEventListener('click', () => {
-    console.log("Paper");
+    console.log(playRound("PAPER", computerPlay()));
 });
 
 scissors_btn.addEventListener('click', () => {
-    console.log("Scissors");
+    console.log(playRound("SCISSORS", computerPlay()));
 });
