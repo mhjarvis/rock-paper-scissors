@@ -42,7 +42,7 @@ function playRound(playerSelection, computerSelection) {        //function plays
     }
 }
 
-(function () {
+/* (function () {
 
     console.log("Welcome to Tic-Tac-Toe");
     console.log(".......................");
@@ -50,4 +50,4 @@ function playRound(playerSelection, computerSelection) {        //function plays
     for(let i = 0; i < 5; i++) {
         console.log(playRound(playerChoice(), computerPlay()));
     }
-})();
+})(); */
