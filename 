@@ -1,0 +1,83 @@
+[33mcommit 9eed93e61852af6d3598ab147fcba9a14ec9861f[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/rps-ui[m[33m, [m[1;32mrps-ui[m[33m)[m
+Author: Markus <markus.h.jarvis@gmail.com>
+Date:   Fri May 6 19:55:02 2022 -0500
+
+    Update structure for score-keeping
+
+[33mcommit a2ed1059d19da8501a8de52833d53b5c73946db1[m
+Author: Markus <markus.h.jarvis@gmail.com>
+Date:   Fri May 6 19:48:47 2022 -0500
+
+    Add score keeping methods and html structure
+
+[33mcommit 62ea2fc90e93d06782c51237f01b2cad51f1c1fc[m
+Author: Markus <markus.h.jarvis@gmail.com>
+Date:   Fri May 6 19:34:54 2022 -0500
+
+    Add updateResponse function to output game status to user
+
+[33mcommit e805185b3d29ad3ddda9350edbed2143dfbf022c[m
+Author: Markus <markus.h.jarvis@gmail.com>
+Date:   Fri May 6 19:24:41 2022 -0500
+
+    Update html structure (title, div container)
+
+[33mcommit f7023b6e64d97da6dd5cff3a605c689969391fda[m
+Author: Markus <markus.h.jarvis@gmail.com>
+Date:   Thu May 5 16:51:40 2022 -0500
+
+    EventListeners call playRound function
+
+[33mcommit 48eff38bc4d828cea7fb7dce282a7dfda4af8fbc[m
+Author: Markus <markus.h.jarvis@gmail.com>
+Date:   Thu May 5 16:47:35 2022 -0500
+
+    Add querySelectors and eventListeners for buttons
+
+[33mcommit fde3c746853ce15ad3dab5754b93abf1cb803c0d[m
+Author: Markus <markus.h.jarvis@gmail.com>
+Date:   Thu May 5 16:31:30 2022 -0500
+
+    Add buttons to ui
+
+[33mcommit 5c9d96a5b388fe05b10a4dcf918c24bfa3cb2065[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: mhjarvis <markus.h.jarvis@gmail.com>
+Date:   Mon Apr 25 14:19:47 2022 -0500
+
+    Add game function to play 5 rounds
+
+[33mcommit d2558c06eca37fcbcbc8e59a4d393421541fd353[m
+Author: mhjarvis <markus.h.jarvis@gmail.com>
+Date:   Mon Apr 25 14:13:19 2022 -0500
+
+    Fix wording in winning declaration
+
+[33mcommit 471a13bb9e2eba430729a3b4b0416530cef20d23[m
+Author: mhjarvis <markus.h.jarvis@gmail.com>
+Date:   Mon Apr 25 14:10:42 2022 -0500
+
+    Add playRound() to play one round of game
+
+[33mcommit e916221a3f49be761342cc65eeb99bea6ccdbd53[m
+Author: mhjarvis <markus.h.jarvis@gmail.com>
+Date:   Mon Apr 25 09:45:14 2022 -0500
+
+    Create self-invoking function to welcome player, get player choice
+
+[33mcommit 105d56e60a4f1f83ed2aca2f0b5bc4b10007e26a[m
+Author: mhjarvis <markus.h.jarvis@gmail.com>
+Date:   Mon Apr 25 09:00:58 2022 -0500
+
+    Create computerPlay() to randomize computer's pick
+
+[33mcommit 861771e7c2cb54a8e071104b660bf028af8f6457[m
+Author: mhjarvis <markus.h.jarvis@gmail.com>
+Date:   Sun Apr 24 18:14:04 2022 -0500
+
+    Initialize and link pages
+
+[33mcommit bd5e0d0cadde9776c7d0aa5846e2560bfb5dec32[m
+Author: Markus <markus.h.jarvis@gmail.com>
+Date:   Sun Apr 24 17:57:22 2022 -0500
+
+    Initial commit
