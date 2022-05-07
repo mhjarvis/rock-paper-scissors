@@ -8,17 +8,23 @@
     <title>Tic-Tac-Toe</title>
 </head>
 <body>
+    <div class="page-wrapper">
 
-    <h1>Tic Tac Toe</h1>
+        <h1>Tic Tac Toe</h1>
 
-    <div id="container">
-        <button class="btn" id="rock-btn">Rock</button>
-        <button class="btn" id="paper-btn">Paper</button>
-        <button class="btn" id="scissors-btn">Scissors</button>
-    </div>
-        <div id="response">Score</div>
-        <div id="player-score">Player Score: 0</div>
-        <div id="computer-score">Computer Score: 0</div>
+        <div id="container">
+            <button class="btn" id="rock-btn">Rock</button>
+            <button class="btn" id="paper-btn">Paper</button>
+            <button class="btn" id="scissors-btn">Scissors</button>
+        </div>
+
+        <div class="scoreboard">
+            <div id="response"></div>
+            <div class="score-container">
+                <div class="score-section">Player Score: <p id="player-score"></p></div>
+                <div class="score-section">Computer Score: <p id="computer-score"></p></div>
+            </div>
+        </div>
     </div>
 </body>
 <script src="/main.js"></script>
