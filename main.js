@@ -13,7 +13,6 @@ function playerChoice() {                           //welcome function/prompt to
     }
 }
 
-
 function computerPlay () {              //function randomly picks and returns computers value
     
     let randomNum = Math.floor(Math.random() * 3 + 1);
@@ -42,9 +41,15 @@ function playRound(playerSelection, computerSelection) {        //function plays
     }
 }
 
-function updateResponse(info) {
+function updateResponse(info, playerScore, computerScore) {             //function outputs results to #response div
+
     const response = document.getElementById("response");
+    const playerScr = document.getElementById("player-score");
+    const computerScr = document.getElementById("computer-score");
+
     response.textContent = info;
+    playerScr.textContent = playerScore;
+    computerScr.textContent = computerScore;
 }
 
 /* (function () {
@@ -57,19 +62,27 @@ function updateResponse(info) {
     }
 })(); */
 
-
 const rock_btn = document.querySelector('#rock-btn');
 const paper_btn = document.querySelector('#paper-btn');
 const scissors_btn = document.querySelector('#scissors-btn');
 
 rock_btn.addEventListener('click', () => {
-    updateResponse(playRound("ROCK", computerPlay()));
+    updateResponse(playRound("ROCK", computerPlay()), playerScore, computerScore);
 });
 
 paper_btn.addEventListener('click', () => {
-    updateResponse(playRound("ROCK", computerPlay()));
+    updateResponse(playRound("PAPER", computerPlay()));
 });
 
 scissors_btn.addEventListener('click', () => {
-    updateResponse(playRound("ROCK", computerPlay()));
+    updateResponse(playRound("SCISSORS", computerPlay()));
 });
+
+let playerScore = 0;
+let computerScore = 0;
+
+(function () {
+
+
+
+})();
