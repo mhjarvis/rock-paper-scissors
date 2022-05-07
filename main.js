@@ -42,6 +42,11 @@ function playRound(playerSelection, computerSelection) {        //function plays
     }
 }
 
+function updateResponse(info) {
+    const response = document.getElementById("response");
+    response.textContent = info;
+}
+
 /* (function () {
 
     console.log("Welcome to Tic-Tac-Toe");
@@ -58,13 +63,13 @@ const paper_btn = document.querySelector('#paper-btn');
 const scissors_btn = document.querySelector('#scissors-btn');
 
 rock_btn.addEventListener('click', () => {
-    console.log(playRound("ROCK", computerPlay()));
-  });
+    updateResponse(playRound("ROCK", computerPlay()));
+});
 
 paper_btn.addEventListener('click', () => {
-    console.log(playRound("PAPER", computerPlay()));
+    updateResponse(playRound("ROCK", computerPlay()));
 });
 
 scissors_btn.addEventListener('click', () => {
-    console.log(playRound("SCISSORS", computerPlay()));
+    updateResponse(playRound("ROCK", computerPlay()));
 });
