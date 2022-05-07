@@ -1,19 +1,10 @@
-function playerChoice() {                           //welcome function/prompt to start game
-    
-    let answer = false;
+// Variables used to keep score
 
-    while(answer == false) {
-        let playerChoice = prompt("Pick one - Rock, Paper, or Scissors: ");
-        playerChoice = playerChoice.toUpperCase();
+let playerScore = 0;
+let computerScore = 0;
 
-        if(playerChoice == "ROCK" || playerChoice == "PAPER" || playerChoice == "SCISSORS") {
-            answer = true;
-            return playerChoice;
-        }
-    }
-}
-
-function computerPlay () {              //function randomly picks and returns computers value
+// Function picks computers choice (randomly)
+function computerPlay () {
     
     let randomNum = Math.floor(Math.random() * 3 + 1);
     
@@ -28,7 +19,8 @@ function computerPlay () {              //function randomly picks and returns co
     }
 }
 
-function playRound(playerSelection, computerSelection) {        //function plays one round of tic-tac-toe
+// Function plays one round of the game
+function playRound(playerSelection, computerSelection) {
 
     if((playerSelection == "ROCK" && computerSelection == "SCISSORS") || (playerSelection == "PAPER" && computerSelection == "ROCK") || (playerSelection == "SCISSORS" && computerSelection == "PAPER")) {
         playerScore += 1;
@@ -43,6 +35,26 @@ function playRound(playerSelection, computerSelection) {        //function plays
     }
 }
 
+// Function checks for winner (first to 5)
+function checkForWinner() {
+    
+    if(playerScore == 5) {
+        window.alert("YOU WIN!");
+        computerScore = 0;
+        playerScore = 0;
+        updateResponse("Make your choice!" , 0, 0);
+    };
+    if(computerScore == 5) {
+        window.alert("COMPUTER WINS");
+        computerScore = 0;
+        playerScore = 0;
+        updateResponse("Make your choice!", 0, 0);
+    };
+
+
+}
+
+// Function updates webpage output
 function updateResponse(info, playerScore, computerScore) {             //function outputs results to #response div
 
     const response = document.getElementById("response");
@@ -52,17 +64,11 @@ function updateResponse(info, playerScore, computerScore) {             //functi
     response.textContent = info;
     playerScr.textContent = playerScore;
     computerScr.textContent = computerScore;
+
+    checkForWinner();
 }
 
-/* (function () {
-
-    console.log("Welcome to Tic-Tac-Toe");
-    console.log(".......................");
-
-    for(let i = 0; i < 5; i++) {
-        console.log(playRound(playerChoice(), computerPlay()));
-    }
-})(); */
+/* Query Selectors and Event Listeners */
 
 const rock_btn = document.querySelector('#rock-btn');
 const paper_btn = document.querySelector('#paper-btn');
@@ -80,12 +86,18 @@ scissors_btn.addEventListener('click', () => {
     updateResponse(playRound("SCISSORS", computerPlay()), playerScore, computerScore);
 });
 
-let playerScore = 0;
-let computerScore = 0;
-
-(function () {
-
+/* Outdated function used for testing */
+function playerChoice() {
     
+    let answer = false;
 
+    while(answer == false) {
+        let playerChoice = prompt("Pick one - Rock, Paper, or Scissors: ");
+        playerChoice = playerChoice.toUpperCase();
 
-})();
+        if(playerChoice == "ROCK" || playerChoice == "PAPER" || playerChoice == "SCISSORS") {
+            answer = true;
+            return playerChoice;
+        }
+    }
+}
