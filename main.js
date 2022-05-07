@@ -31,9 +31,11 @@ function computerPlay () {              //function randomly picks and returns co
 function playRound(playerSelection, computerSelection) {        //function plays one round of tic-tac-toe
 
     if((playerSelection == "ROCK" && computerSelection == "SCISSORS") || (playerSelection == "PAPER" && computerSelection == "ROCK") || (playerSelection == "SCISSORS" && computerSelection == "PAPER")) {
+        playerScore += 1;
         return "Player Wins! " + playerSelection + " beats " + computerSelection + ".";
     }
     if((playerSelection == "ROCK" && computerSelection == "PAPER") || (playerSelection == "PAPER" && computerSelection == "SCISSORS") || (playerSelection == "SCISSORS" && computerSelection == "ROCK")) {
+        computerScore += 1;
         return "Computer Wins! " + computerSelection + " beats " + playerSelection + ".";
     }
     if(playerSelection == computerSelection) {
@@ -71,11 +73,11 @@ rock_btn.addEventListener('click', () => {
 });
 
 paper_btn.addEventListener('click', () => {
-    updateResponse(playRound("PAPER", computerPlay()));
+    updateResponse(playRound("PAPER", computerPlay()), playerScore, computerScore);
 });
 
 scissors_btn.addEventListener('click', () => {
-    updateResponse(playRound("SCISSORS", computerPlay()));
+    updateResponse(playRound("SCISSORS", computerPlay()), playerScore, computerScore);
 });
 
 let playerScore = 0;
